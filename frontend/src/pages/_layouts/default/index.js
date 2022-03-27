@@ -1,10 +1,10 @@
-import { Wrapper } from './styles';
-import PropTypes from 'prop-types';
+import { Wrapper } from "./styles";
+import PropTypes from "prop-types";
 
 export default function DefaultLayout({ children }) {
-    return <Wrapper>{children}</Wrapper>
+  return <Wrapper>{children}</Wrapper>;
 }
 
 DefaultLayout.propTypes = {
-    children: PropTypes.element.isRequired,
+  children: PropTypes.element.isRequired,
 };
