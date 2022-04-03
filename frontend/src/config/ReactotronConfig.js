@@ -11,6 +11,4 @@ if ({/*process.env.NODE_ENV === "development"*/}) {
   tron.clear();
 
   console.tron = tron;
-
-  console.tron.log('REACTOTRON')
 }

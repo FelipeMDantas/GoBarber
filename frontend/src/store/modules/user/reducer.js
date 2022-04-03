@@ -26,5 +26,4 @@ export default function user(state = INITAL_STATE, action) {
       default:
     }
   });
-}
-*/
+}*/
