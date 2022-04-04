@@ -23,6 +23,8 @@ export function* signIn({ payload }) {
       return;
     }
 
+    api.defaults.headers.Authorization = `Bearer ${token}`
+
     yield put(signInSuccess(token, user));
 
     history.push("/dashboard");
@@ -30,6 +32,7 @@ export function* signIn({ payload }) {
     toast.error("Falha na autenticação, verifique seus dados.");
     yield put(signFailure());
   }
+  console.tron.log('sagas: ' + api.defaults);
 }
 
 export function* SignUp({ payload }) {

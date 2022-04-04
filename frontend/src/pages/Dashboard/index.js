@@ -1,3 +1,10 @@
+import api from "~/services/api";
+
 export default function Dashboard() {
-    return <h1>Dashboard</h1>;
+  console.tron.log("dashboard: " + api.defaults);
+  api.get("appointments");
+
+  return (
+    <h1>Dashboard</h1>
+  )
 }

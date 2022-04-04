@@ -25,7 +25,7 @@ export default function RouteWrapper({
 
   const Layout = signed ? DefaultLayout : AuthLayout;
 
-  console.tron.log("Return Layout");
+  //console.tron.log("Props: " + JSON.stringify(...rest));
 
   return (
         <Route
