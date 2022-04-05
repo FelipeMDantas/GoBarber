@@ -7,6 +7,7 @@ const INITAL_STATE = {
 export default function user(state = INITAL_STATE, action) {
   switch (action.type) {
     case "@auth/SIGN_IN_SUCCESS":
+      console.tron.log('user/reducer');
       return produce(state, (draft) => {
         draft.profile = action.payload.user;
       });

@@ -1,7 +1,7 @@
 import api from "~/services/api";
 
 export default function Dashboard() {
-  console.tron.log("dashboard: " + api.defaults);
+  console.tron.log('Dashboard/index')
   api.get("appointments");
 
   return (

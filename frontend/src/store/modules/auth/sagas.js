@@ -5,6 +5,7 @@ import api from "~/services/api";
 import history from "~/services/history";
 
 export function* signIn({ payload }) {
+  console.tron.log('auth/sagas function* SingIn');
   try {
     const { email, password } = payload;
 
@@ -32,10 +33,10 @@ export function* signIn({ payload }) {
     toast.error("Falha na autenticação, verifique seus dados.");
     yield put(signFailure());
   }
-  console.tron.log('sagas: ' + api.defaults);
 }
 
 export function* SignUp({ payload }) {
+  console.tron.log('auth/sagas function* SingUp');
   try {
     const { name, email, password } = payload;
 

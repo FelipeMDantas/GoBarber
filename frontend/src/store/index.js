@@ -6,6 +6,8 @@ import rootReducer from "./modules/rootReducer";
 import rootSaga from "./modules/rootSaga";
 import "~/config/ReactotronConfig";
 
+console.tron.log('store/index');
+
 const sagaMonitor =
   process.env.NODE_ENV === "development"
     ? console.tron.createSagaMonitor()
