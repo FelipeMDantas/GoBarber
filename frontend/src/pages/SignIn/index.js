@@ -4,7 +4,6 @@ import { Form, Input } from "@rocketseat/unform";
 import * as Yup from "yup";
 import { signInRequest } from "~/store/modules/auth/actions";
 import logo from "~/assets/logo.svg";
-import rootReducer from "~/store/modules/rootReducer";
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -20,7 +19,6 @@ export default function SignIn() {
 
   function handleSubmit({ email, password }) {
     dispatch(signInRequest(email, password));
-    rootReducer();
   }
 
   return (

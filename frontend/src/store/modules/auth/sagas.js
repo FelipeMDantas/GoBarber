@@ -5,7 +5,7 @@ import api from "~/services/api";
 import history from "~/services/history";
 
 export function* signIn({ payload }) {
-  console.tron.log('auth/sagas function* SingIn');
+  console.tron.log("auth/sagas function* SingIn");
   try {
     const { email, password } = payload;
 
@@ -24,7 +24,7 @@ export function* signIn({ payload }) {
       return;
     }
 
-    api.defaults.headers.Authorization = `Bearer ${token}`
+    api.defaults.headers.Authorization = `Bearer ${token}`;
 
     yield put(signInSuccess(token, user));
 
@@ -33,10 +33,12 @@ export function* signIn({ payload }) {
     toast.error("Falha na autenticação, verifique seus dados.");
     yield put(signFailure());
   }
+
+  console.log("API: " + JSON.stringify(api.defaults.headers));
 }
 
 export function* SignUp({ payload }) {
-  console.tron.log('auth/sagas function* SingUp');
+  console.tron.log("auth/sagas function* SingUp");
   try {
     const { name, email, password } = payload;
 
@@ -55,7 +57,18 @@ export function* SignUp({ payload }) {
   }
 }
 
+export function setToken({ payload }) {
+  if (!payload) return;
+
+  const { token } = payload.auth;
+
+  if (token) {
+    api.defaults.headers.Authorization = `Bearer ${token}`;
+  }
+}
+
 export default all([
+  takeLatest("persist/REHYDRATE", setToken),
   takeLatest("@auth/SIGN_IN_REQUEST", signIn),
   takeLatest("@auth/SIGN_UP_REQUEST", SignUp),
 ]);

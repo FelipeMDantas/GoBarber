@@ -9,14 +9,14 @@ export default function RouteWrapper({
   isPrivate,
   ...rest
 }) {
-  console.tron.log('routes/Route')
+  console.tron.log("routes/Route");
   const signed = store.getState().auth.signed;
   //console.tron.log("Signed: " + Boolean(signed));
   //console.tron.log("isPrivate: " + Boolean(isPrivate));
 
   if (!signed && isPrivate) {
     console.tron.log('Redirect to="/"');
-    return <Redirect to="/" />; 
+    return <Redirect to="/" />;
   }
 
   if (signed && !isPrivate) {
