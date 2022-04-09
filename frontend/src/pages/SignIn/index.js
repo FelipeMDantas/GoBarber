@@ -13,7 +13,6 @@ const schema = Yup.object().shape({
 });
 
 export default function SignIn() {
-  console.tron.log('SignIn/index')
   const dispatch = useDispatch();
   const loading = useSelector(state => state.auth.loading)
 

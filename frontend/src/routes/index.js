@@ -6,7 +6,6 @@ import Dashboard from "../pages/Dashboard";
 import Profile from "../pages/Profile";
 
 export default function Routes() {
-  console.tron.log('routes/index')
   return (
       <Switch>
         <Route path="/" exact component={SignIn} />

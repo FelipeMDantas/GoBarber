@@ -9,7 +9,6 @@ import { store, persistor } from "./store";
 import GlobalStyle from "./styles/global";
 
 function App() {
-  console.tron.log('App.js')
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>

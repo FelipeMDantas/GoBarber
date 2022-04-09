@@ -16,7 +16,6 @@ const schema = Yup.object().shape({
 });
 
 export default function SignUp() {
-  console.tron.log('SignUp/index')
   const dispatch = useDispatch();
 
   function handleSubmit({ name, email, password }) {
