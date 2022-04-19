@@ -45,8 +45,17 @@ A couple of technologies were employed in this project. Among them:
 - [MongoDB] - a NoSQL source-available cross-platform document-oriented database program
 - [Mongoose] - a schema-based solution to model application data
 - [Redis] - an open source, in-memory data structure store, used as a database
+- [Reactotron] - an app for inspecting React JS and React Native apps
+- [Prop-types] - a runtime type checking mechanism for React props and similar object
+- [Styled Components] - a feature that allows one to write actual CSS in JavaScript
+- [Polished] - a toolset for writing styles in JavaScript
+- [Yup] - a schema builder for runtime value parsing and validation
+- [Redux] - a container for centralizing an application's state
+- [Axios] - a promise-based HTTP Client for NodeJS and the browser
+- [React-Toastify] - a package that allows one to add notifications to one's app
+- [React Icons] - a dependecy that helps to include popular icons in React projects
+- [Perfect Scrollbar] - a custom scrollbar plugin
 
-To be continued...
 
     [ReactJS]: https://reactjs.org/
     [Cors]: https://github.com/expressjs/cors
@@ -60,3 +69,17 @@ To be continued...
     [MongoDB]: https://www.mongodb.com/
     [Mongoose]: https://mongoosejs.com/
     [Redis]: https://redis.io/
+    [Reactotron]: https://infinite.red/reactotron
+    [Prop-types]: https://github.com/facebook/prop-types
+    [Styled Components]: https://styled-components.com/
+    [Polished]: https://polished.js.org/
+    [Yup]: https://github.com/jquense/yup
+    [Redux]: https://redux.js.org/
+    [Axios]: https://axios-http.com/docs/intro
+    [React-Toastify]: https://fkhadra.github.io/react-toastify/introduction
+    [React Icons]: https://react-icons.github.io/react-icons/
+    [Perfect Scrollbar]: https://perfectscrollbar.com/
+
+
+
+
