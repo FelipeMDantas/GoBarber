@@ -1,7 +1,7 @@
 import {Alert} from 'react-native';
 import React, {useRef, useState} from 'react';
-import {Image, Button} from 'react-native';
-import {useDispatch} from 'react-redux';
+import {Image} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
 import logo from '~/assets/logo.png';
 import Background from '~/components/Background';
 import {signInRequest} from '~/store/modules/auth/actions';
@@ -20,6 +20,8 @@ export default function SignIn({navigation}) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const loading = useSelector(state => state.auth.loading);
 
   function handleSubmit() {
     Alert.alert('Dispatch', 'Dispatch');
@@ -58,7 +60,9 @@ export default function SignIn({navigation}) {
           <SubmitButton onPress={handleSubmit}>Acessar</SubmitButton>
         </Form>
 
-        <SignLink onPress={() => navigation.navigate('SignUp')}>
+        <SignLink
+          loading={loading}
+          onPress={() => navigation.navigate('SignUp')}>
           <SignLinkText>Criar conta gratuita</SignLinkText>
         </SignLink>
       </Container>
