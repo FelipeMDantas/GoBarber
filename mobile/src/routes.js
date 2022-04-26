@@ -19,49 +19,55 @@ export default (isSignedIn = false) =>
           SignIn,
           SignUp,
         }),
-        App: createBottomTabNavigator({
-          Dashboard,
-          New: {
-            screen: createStackNavigator(
-              {
-                SelectProvider,
-                SelectDateTime,
-                Confirm,
-              },
-              {
-                defaultNavigationOptions: {
-                  headerTransparent: true,
-                  headerTintColor: '#FFF',
-                  headerLeftContainerStyle: {
-                    marginLeft: 20,
+        App: createBottomTabNavigator(
+          {
+            Dashboard,
+            New: {
+              screen: createStackNavigator(
+                {
+                  SelectProvider,
+                  SelectDateTime,
+                  Confirm,
+                },
+                {
+                  defaultNavigationOptions: {
+                    headerTransparent: true,
+                    headerTintColor: '#FFF',
+                    headerLeftContainerStyle: {
+                      marginLeft: 20,
+                    },
                   },
                 },
-              },
-            ),
-            navigationOptions: {
-              tabBarVisible: false,
-              tabBarLabel: 'Agendar',
-              tabBarIcon: (
-                <Icon
-                  name="add-circle-outline"
-                  size={20}
-                  color="rgba(255, 255, 255, 0.6)"
-                />
               ),
+              navigationOptions: {
+                tabBarVisible: false,
+                tabBarLabel: 'Agendar',
+                tabBarIcon: (
+                  <Icon
+                    name="add-circle-outline"
+                    size={20}
+                    color="rgba(255, 255, 255, 0.6)"
+                  />
+                ),
+              },
+            },
+            Profile,
+          },
+          {
+            resetOnBlur: true,
+            tabBarOptions: {
+              KeyboardHidesTabBar: true,
+              activeTintColor: '#FFF',
+              inactiveTintColor: 'rgba(255, 255, 255, 0.6)',
+              style: {
+                backgroundColor: '#8d41a8',
+              },
             },
           },
-          Profile,
-        }),
+        ),
       },
       {
-        tabBarOptions: {
-          KeyboardHidesTabBar: true,
-          activeTintColor: '#FFF',
-          inactiveTintColor: 'rgba(255, 255, 255, 0.6)',
-          style: {
-            backgroundColor: '#8d41a8',
-          },
-        },
+        initialRouteName: isSignedIn ? 'App' : 'Sign',
       },
     ),
   );
