@@ -43,7 +43,6 @@ A couple of technologies were employed in this project. Among them:
 - [Prettier] - a code formatter
 - [date-fns] - toolset for manipulating JavaScript dates
 - [MongoDB] - a NoSQL source-available cross-platform document-oriented database program
-- [Mongoose] - a schema-based solution to model application data
 - [Redis] - an open source, in-memory data structure store, used as a database
 - [Reactotron] - an app for inspecting React JS and React Native apps
 - [Prop-types] - a runtime type checking mechanism for React props and similar object
@@ -67,7 +66,6 @@ A couple of technologies were employed in this project. Among them:
     [Prettier]: https://prettier.io/
     [date-fns]: https://date-fns.org/
     [MongoDB]: https://www.mongodb.com/
-    [Mongoose]: https://mongoosejs.com/
     [Redis]: https://redis.io/
     [Reactotron]: https://infinite.red/reactotron
     [Prop-types]: https://github.com/facebook/prop-types
